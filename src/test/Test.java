@@ -24,7 +24,7 @@ public class Test {
 			System.out.println("补码是"+syuan);
 			System.out.println("反码是"+syuan);
 			
-//			System.out.println("二进制数的n      "+n);
+//			System.out.println("二进制数的n  "+n);
 		}
 		else if(value<0)
 		{	
