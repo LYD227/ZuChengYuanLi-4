@@ -3,57 +3,57 @@ package test;
 import java.util.Scanner;
 
 /**
- * @author ÁõÑÇ¶«
+ * @author åˆ˜äºšä¸œ
  * @date 2018/11/20
- *	 ÊäÈëÒ»¸öÕæÖµ£¨ÕûÊı£©ÇóËüµÄÔ­Âë£¬·´Âë£¬²¹Âë
+ *	 è¾“å…¥ä¸€ä¸ªçœŸå€¼ï¼ˆæ•´æ•°ï¼‰æ±‚å®ƒçš„åŸç ï¼Œåç ï¼Œè¡¥ç 
  */
 public class Test {
 	public static void main(String[] args) {
-		System.out.println("ÕæÖµ--¡µÔ­Âë");
-		System.out.println("ÇëÊäÈëÒ»¸öÕûÊı!!!!!");
+		System.out.println("çœŸå€¼--ã€‰åŸç ");
+		System.out.println("è¯·è¾“å…¥ä¸€ä¸ªæ•´æ•°!!!!!");
 		Scanner sc=new Scanner(System.in);
 		int value=sc.nextInt();          
 		StringBuilder syuan=new StringBuilder();
 		if(value>0)
 		{
-			String Bvalue=Integer.toBinaryString(value);//½«Ò»¸öÕûÊı×ª»»³É×Ö·û´®ÀàĞÍµÄ¶ş½øÖÆÊı
-			int n=Bvalue.length();  //¶ş½øÖÆµÄÊı×ÖµÄ¸öÊın
+			String Bvalue=Integer.toBinaryString(value);//å°†ä¸€ä¸ªæ•´æ•°è½¬æ¢æˆå­—ç¬¦ä¸²ç±»å‹çš„äºŒè¿›åˆ¶æ•°
+			int n=Bvalue.length();  //äºŒè¿›åˆ¶çš„æ•°å­—çš„ä¸ªæ•°n
 			syuan.append("0,");
 			syuan.append(Bvalue);
-			System.out.println("Ô­ÂëÊÇ"+syuan);
-			System.out.println("²¹ÂëÊÇ"+syuan);
-			System.out.println("·´ÂëÊÇ"+syuan);
+			System.out.println("åŸç æ˜¯"+syuan);
+			System.out.println("è¡¥ç æ˜¯"+syuan);
+			System.out.println("åç æ˜¯"+syuan);
 			
-//			System.out.println("¶ş½øÖÆÊıµÄn  "+n);
+//			System.out.println("äºŒè¿›åˆ¶æ•°çš„n  "+n);
 		}
 		else if(value<0)
 		{	
-			int value2=Math.abs(value);         //¸ºÊıµÄ¾ø¶ÔÖµ
-			int value3=value2-1;           //¼õÒ»Çó·´£¬Çó²¹Âë
+			int value2=Math.abs(value);         //è´Ÿæ•°çš„ç»å¯¹å€¼
+			int value3=value2-1;           //å‡ä¸€æ±‚åï¼Œæ±‚è¡¥ç 
 			String Bvalue=Integer.toBinaryString(value2);
 			String BFvalue=Integer.toBinaryString(~value2);
 			int n=Bvalue.length(); 
-			String str=BFvalue.substring(BFvalue.length()-n);     //½ØÈ¡·´ÂëµÄºó¼¸¸öÊı
+			String str=BFvalue.substring(BFvalue.length()-n);     //æˆªå–åç çš„åå‡ ä¸ªæ•°
 			syuan.append("1,");
 			syuan.append(Bvalue);
-			System.out.println("Ô­ÂëÊÇ:"+syuan);
-			System.out.println("·´ÂëÊÇ:1,"+str);
+			System.out.println("åŸç æ˜¯:"+syuan);
+			System.out.println("åç æ˜¯:1,"+str);
 			String BBvalue=Integer.toBinaryString(~value3);
 			String str3=BBvalue.substring(BFvalue.length()-n);
-			System.out.println("²¹ÂëÊÇ:1,"+str3);
+			System.out.println("è¡¥ç æ˜¯:1,"+str3);
 		}
 		else
 		{
-			System.out.println("0µÄÔ­Âë²»Î¨Ò»");
-			System.out.println("[+0]µÄÔ­ÂëÊÇ00.....0");
-			System.out.println("[-0]µÄÔ­ÂëÊÇ10.....0");
+			System.out.println("0çš„åŸç ä¸å”¯ä¸€");
+			System.out.println("[+0]çš„åŸç æ˜¯00.....0");
+			System.out.println("[-0]çš„åŸç æ˜¯10.....0");
 			System.out.println("--------------------------------------------");
-			System.out.println("0µÄ²¹ÂëÎ¨Ò»");
-			System.out.println("[+0]ºÍ[-0]µÄ²¹Âë¶¼ÊÇ00.....0");
+			System.out.println("0çš„è¡¥ç å”¯ä¸€");
+			System.out.println("[+0]å’Œ[-0]çš„è¡¥ç éƒ½æ˜¯00.....0");
 			System.out.println("---------------------------------------------");
-			System.out.println("0µÄ·´Âë²»Î¨Ò»");
-			System.out.println("[+0]µÄ·´ÂëÊÇ00..........0");
-			System.out.println("[-0]µÄ·´ÂëÊÇ11..........1");
+			System.out.println("0çš„åç ä¸å”¯ä¸€");
+			System.out.println("[+0]çš„åç æ˜¯00..........0");
+			System.out.println("[-0]çš„åç æ˜¯11..........1");
 		}
 		System.out.println("-------------------------------------------------");
 		
